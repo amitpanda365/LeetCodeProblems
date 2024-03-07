@@ -1,6 +1,6 @@
-# Write your MySQL query statement below
+/* Write your T-SQL query statement below */
 select t1.name from employee t1 inner join
-(select e.id as id, count(1) from 
+(select e.id as id, count(1) as cnt from 
 employee e inner join employee m
 on e.id = m.managerId 
 group by e.id having count(1) >= 5) t2
